@@ -11,6 +11,12 @@ Features :
 
 Many thanks to [Neo23x0](https://github.com/Neo23x0) for the log4shell detector python script.
 
+Quick start
+-----------
+
+If you are not familiar with ansible and need the simpliest documentation to run the detection to multiple servers, go directly 
+ to the [playbook example documentation](https://github.com/r0mdau/ansible-log4shell-detector).
+
 Requirements
 ------------
 
