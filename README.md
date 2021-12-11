@@ -33,7 +33,7 @@ None.
 Example Playbook
 ----------------
 
-Playbook example : r0mdau/ansible-log4shell-detector
+Playbook example : [r0mdau/ansible-log4shell-detector](https://github.com/r0mdau/ansible-log4shell-detector)
 
     - hosts: javaservers
       vars_files:
