@@ -1,0 +1,2 @@
+---
+log4shell_args: "-p /var/log"

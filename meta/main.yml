@@ -1,0 +1,30 @@
+---
+
+galaxy_info:
+  role_name: log4shell-detector
+  author: r0mdau
+  description: Detect log4shell log4j exploits CVE-2021-44228
+  company: opensource
+  license: license (Apache-2.0)
+
+  min_ansible_version: 2.7
+
+  platforms:
+    - name: Debian
+      versions:
+        - stretch
+        - buster
+        - bullseye
+        - sid
+    - name: EL
+      versions:
+        - 6
+        - 7
+        - 8
+
+  galaxy_tags:
+    - log4j
+    - log4shell
+    - security
+
+dependencies: []
