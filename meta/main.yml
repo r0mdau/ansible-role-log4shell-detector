@@ -1,7 +1,7 @@
 ---
 
 galaxy_info:
-  role_name: log4shell-detector
+  role_name: log4shell_detector
   author: r0mdau
   description: Detect log4shell log4j exploits CVE-2021-44228
   company: opensource
