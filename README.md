@@ -40,7 +40,7 @@ Playbook example : r0mdau/ansible-log4shell-detector
       roles:
         - { role: r0mdau.log4shell-detector }
 
-*Inside playbook `group_vars/all.yml`*:
+*Inside playbook `vars/main.yml`*:
 
     log4shell_args: "-p /var/log"
 
