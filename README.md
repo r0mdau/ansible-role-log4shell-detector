@@ -7,6 +7,7 @@ Features :
 * install python3, git
 * clone Neo23x0/log4shell-detector repository
 * launch log4shell-detector.py script
+* copy log4shell-detector output on local files in json
 
 Many thanks to [Neo23x0](https://github.com/Neo23x0) for the log4shell detector python script.
 
