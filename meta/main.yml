@@ -18,7 +18,6 @@ galaxy_info:
         - sid
     - name: EL
       versions:
-        - 6
         - 7
         - 8
 
