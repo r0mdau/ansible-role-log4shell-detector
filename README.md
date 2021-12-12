@@ -1,7 +1,7 @@
 Ansible Role: log4shell-detector
 ================================
 
-Role to run [log4shell-detector](https://github.com/Neo23x0/log4shell-detector) script on Debian and Rhel OS.
+Role to run [log4shell-detector](https://github.com/Neo23x0/log4shell-detector) script on Debian and RHEL base OS.
 
 Features :
 * install python3, git

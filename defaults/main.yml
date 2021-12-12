@@ -1,2 +1,2 @@
 ---
-log4shell_args: "-p /var/log"
+log4shell_args: "-p /var/log --quick"
