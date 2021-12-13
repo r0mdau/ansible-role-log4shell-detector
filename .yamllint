@@ -7,3 +7,6 @@ rules:
     level: warning
   truthy:
     allowed-values: ["yes", "no", "true", "false"]
+
+ignore: |
+  .github/workflows/*.yml

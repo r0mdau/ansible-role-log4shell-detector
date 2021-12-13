@@ -18,7 +18,13 @@
   register: log4shell_output
 
 - name: Save log4shell output locally
-  local_action: copy content={{ log4shell_output }} dest=log4shell_{{ inventory_hostname }}.log
+  delegate_to: localhost
+  ansible.builtin.copy:
+    content: "{{ log4shell_output }}"
+    dest: "log4shell_{{ inventory_hostname }}.log"
+    mode: '0755'
+    # owner: "{{ lookup('env', 'USER') }}"
+
   become: false
 
 - name: Delete log4shell-detector directory
