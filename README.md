@@ -52,7 +52,7 @@ Playbook example : [r0mdau/ansible-log4shell-detector](https://github.com/r0mdau
       vars_files:
         - vars/main.yml
       roles:
-        - { role: r0mdau.log4shell-detector }
+        - { role: r0mdau.log4shell_detector }
 
 *Inside playbook `vars/main.yml`*:
 
