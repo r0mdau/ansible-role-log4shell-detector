@@ -1,2 +1,5 @@
 ---
+
 log4shell_args: "-p /var/log --quick"
+second_scan_args: "/"
+second_scan: false

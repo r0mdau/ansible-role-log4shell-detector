@@ -1,0 +1,25 @@
+---
+
+- name: Download hillu/local-log4j-vuln-scanner binary
+  get_url:
+    url: https://github.com/hillu/local-log4j-vuln-scanner/releases/download/v0.7.1/local-log4j-vuln-scanner
+    dest: /opt/log4j-vuln-scanner
+    mode: '0755'
+    checksum: sha256:066bee52a00d50cf5eb6005b0389a08fe65d690a829aacbe5038e8459aa395e9
+
+- name: Run hillu/local-log4j-vuln-scanner tool
+  command: /opt/log4j-vuln-scanner {{ second_scan_args }}
+  register: hillu_log4shell_output
+
+- name: Save hillu/local-log4j-vuln-scanner output locally
+  delegate_to: localhost
+  ansible.builtin.copy:
+    content: "{{ hillu_log4shell_output }}"
+    dest: "hillu_log4shell_{{ inventory_hostname }}.log"
+    mode: '0755'
+  become: false
+
+- name: Delete hillu/local-log4j-vuln-scanner binary
+  file:
+    state: absent
+    path: /opt/log4j-vuln-scanner

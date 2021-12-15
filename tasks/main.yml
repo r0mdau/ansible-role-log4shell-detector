@@ -7,27 +7,28 @@
       - git
     state: present
 
-- name: Clone @Neo23x0 log4shell-detector repository
+- name: Clone Neo23x0/log4shell-detector repository
   ansible.builtin.git:
     repo: https://github.com/Neo23x0/log4shell-detector.git
     dest: /opt/log4shell-detector
     version: main
 
-- name: Run log4shell-detector script with default values
+- name: Run Neo23x0/log4shell-detector tool
   command: python3 /opt/log4shell-detector/log4shell-detector.py {{ log4shell_args }}
   register: log4shell_output
 
-- name: Save log4shell output locally
+- name: Save Neo23x0/log4shell-detector output locally
   delegate_to: localhost
   ansible.builtin.copy:
     content: "{{ log4shell_output }}"
     dest: "log4shell_{{ inventory_hostname }}.log"
     mode: '0755'
-    # owner: "{{ lookup('env', 'USER') }}"
-
   become: false
 
 - name: Delete log4shell-detector directory
   file:
     state: absent
     path: /opt/log4shell-detector
+
+- include: second_scan.yml
+  when: second_scan == true
