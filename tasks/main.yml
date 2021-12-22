@@ -20,7 +20,7 @@
 - name: Save Neo23x0/log4shell-detector output locally
   delegate_to: localhost
   ansible.builtin.copy:
-    content: "{{ log4shell_output }}"
+    content: "{{ log4shell_output.stdout }}"
     dest: "log4shell_{{ inventory_hostname }}.log"
     mode: '0755'
   become: false
